@@ -1,0 +1,13 @@
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.xml
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.dll
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.pdb
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.apk
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android-Signed.apk
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\Android.csproj.CoreCompileInputs.cache
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\Zebble.Plugin.zebbleOxyPlot.Android.dll
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\Zebble.Plugin.zebbleOxyPlot.Android.pdb
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\android\bin\Zebble.Plugin.zebbleOxyPlot.Android.apk
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\R.cs.flag
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\uploadflags.txt
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\Android\obj\Debug\Android.csprojResolveAssemblyReference.cache
+E:\Projects\Geeks\MyProjects\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.dll.mdb

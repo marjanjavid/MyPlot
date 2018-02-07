@@ -91,8 +91,9 @@
     <Reference Include="Zebble.CheckBox.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.CheckBox.1.22.110\lib\MonoAndroid10\Zebble.CheckBox.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Zebble.Plugin.Chart.Android">
-      <HintPath>..\..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.Android.dll</HintPath>
+    <Reference Include="Zebble.Plugin.zebbleOxyPlot.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ZebbleChart\zebbleOxyPlot\zebbleOxyPlot\lib\Zebble.Plugin.zebbleOxyPlot.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
