@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.Grid.UWP</name>
+    </assembly>
+    <members>
+        <member name="M:Zebble.Grid`2.LazyLoadMore">
+            <summary>
+            Returns whether it successfully added one.
+            </summary>
+        </member>
+        <member name="M:Zebble.Grid.EnsureFullColumns">
+            <summary>
+            If the number of items in the last row is less than the columns, it adds empty canvas cells to fill it up.
+            This is useful for when you want to benefit from the automatic width allocation.
+            </summary>
+        </member>
+    </members>
+</doc>

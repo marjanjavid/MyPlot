@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.WebApi.UWP</name>
+    </assembly>
+    <members>
+        <member name="M:Zebble.BaseApi.Url(System.String[])">
+            <summary>
+            Returns a full absolute URL for a specified relativeUrl.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.DisposeCache">
+            <summary>
+            Deletes all cached Get API results.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.DisposeCache(System.String)">
+            <summary>
+            Deletes the cached Get API result for the specified API url.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.RequestInfo.Send">
+            <summary>
+            Sends this request to the server and processes the response.
+            The error action will also apply.
+            It will return whether the response was successfully received.
+            </summary>
+        </member>
+    </members>
+</doc>
