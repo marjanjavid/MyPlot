@@ -3,7 +3,10 @@
 <z-Component z-type="Page1" z-base="Zebble.Page" z-namespace="UI.Pages"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
-  <Stack Style.Width="200" Style.Height="300"><zebbleOxyPlot Style.Width="200" Style.Height="300" Title="man"></zebbleOxyPlot></Stack>
+  <Stack Style.Width="200" Style.Height="300">
+    <zebbleOxyPlot Style.Width="200" Style.Height="300" Id="myPlot">
+    <zebbleOxyPlot.PlotModel Title="df"></zebbleOxyPlot.PlotModel>
+  </zebbleOxyPlot></Stack>
   
   
 

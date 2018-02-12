@@ -11,13 +11,12 @@ namespace Zebble
     using OxyPlot.Series;
     using OxyPlot.Xamarin.Android;
     using Android;
-    using static Zebble.zebbleOxyPlot;
 
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class zebbleOxyPlotRenderer : INativeRenderer
     {
         zebbleOxyPlot View;
-        PlotView Container;
+        ChartLayout Container;
         static int NextId;
         public async Task<Android.Views.View> Render(Renderer renderer)
         {
@@ -26,7 +25,10 @@ namespace Zebble
 
 
                 View = (zebbleOxyPlot)renderer.View;
-                await View.WhenShown(() => { Thread.UI.Run(LoadChart); });
+
+                Container = new ChartLayout(Renderer.Context);
+                Container.Id = FindFreeId();
+                //await View.WhenShown(() => { Thread.UI.Run(LoadChart); });
 
                 return Container;
             }
@@ -44,21 +46,20 @@ namespace Zebble
         async Task LoadChart()
         {
             //We should wait until the view id is added to resources dynamically
-            //while (UIRuntime.CurrentActivity.FindViewById(Container.Id) == null) await Task.Delay(Animation.OneFrame);
+            while (UIRuntime.CurrentActivity.FindViewById(Container.Id) == null) await Task.Delay(Animation.OneFrame);
 
-            Container = new PlotView(Renderer.Context)
+            var view = new PlotView(Renderer.Context)
             {
                 Model = CreatePlotModel(),
-                
             };
+
+            Container.AddView(view);
+
             await Task.CompletedTask;
         }
-
-        
-
         private PlotModel CreatePlotModel()
         {
-            var plotModel = new PlotModel { Title = View.Title  };
+            var plotModel = new PlotModel { Title = View.plotmodel.Title };
 
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });

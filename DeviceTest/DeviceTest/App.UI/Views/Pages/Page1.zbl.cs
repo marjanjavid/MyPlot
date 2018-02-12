@@ -14,8 +14,12 @@ namespace UI.Pages
         {
             /* TODO: Any custom initialization code here will run 
                BEFORE child views are created from ZBL markup.*/
+               
          await base.OnInitializing();
-           
+            //myPlot.Add(new zebbleOxyPlot.PlotModel
+            //{
+            //    Title = "test"
+            //});
             /* TODO: Any configuration code here will run 
                AFTER child views are created from ZBL markup. */
         }
