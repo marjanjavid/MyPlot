@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<z-Component z-type="Page1" z-base="Zebble.Page" z-namespace="UI.Pages"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
+
+  <Stack Style.Width="200" Style.Height="300">
+    <Chart Style.Width="200" Style.Height="300" Id="myPlotView">
+    </Chart>
+  </Stack>
+
+</z-Component>
