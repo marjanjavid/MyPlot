@@ -102,8 +102,9 @@
     <Reference Include="Zebble.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.4.4.104\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Zebble.Plugin.Chart.Android">
-      <HintPath>..\..\..\..\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.Android.dll</HintPath>
+    <Reference Include="Zebble.Plugin.Chart.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.WebApi.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.WebApi.4.5.277\lib\MonoAndroid10\Zebble.WebApi.Android.dll</HintPath>

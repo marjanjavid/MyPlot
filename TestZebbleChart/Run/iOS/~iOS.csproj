@@ -144,7 +144,7 @@
       <HintPath>..\..\..\packages\Zebble.4.4.104\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Plugin.Chart.iOS">
-      <HintPath>..\..\..\..\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
+      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.WebApi.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.WebApi.4.5.277\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>

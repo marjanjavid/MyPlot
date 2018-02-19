@@ -122,8 +122,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Zebble.Plugin.Chart.UWP">
-      <HintPath>..\..\..\..\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.UWP.dll</HintPath>
+    <Reference Include="Zebble.Plugin.Chart.UWP, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.UWP.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\..\App.UI\UI.projitems" Label="Shared" Condition="Exists('..\..\App.UI\UI.projitems')" />
