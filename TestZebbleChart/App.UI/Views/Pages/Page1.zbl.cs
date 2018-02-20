@@ -57,11 +57,26 @@ namespace UI.Pages
                     new Chart.PieSlice("Oceania", 35)
                 })
             };
+
+            //bar plotmodel
+            var barPlotModel = new Chart.PlotModel
+            {
+                Title = "zebbleBarChart",
+                Chart = new Chart.Bar(new List<Chart.Item>
+                {
+                    new Chart.Item(25),
+                    new Chart.Item(137),
+                    new Chart.Item(13),
+                    new Chart.Item(40),
+                })
+            };
+
             await base.OnInitializing();
 
-            await linePlotView.Add(linePlotModel);
-            await areaPlotView.Add(areaPlotModel);
-            await piePlotView.Add(piePlotModel);
+            //await linePlotView.Add(linePlotModel);
+            //await areaPlotView.Add(areaPlotModel);
+            //await piePlotView.Add(piePlotModel);
+            await barPlotView.Add(barPlotModel);
         }
 
 

@@ -5,9 +5,18 @@
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
 
   <Stack Style.Width="400" Style.Height="900" Direction="Vertical">
-    <Stack Style.Width="200" Style.Height="200"><Chart Style.Width="200" Style.Height="200" Id="linePlotView"></Chart></Stack>
-    <Stack Style.Width="200" Style.Height="200"><Chart Style.Width="200" Style.Height="200" Id="areaPlotView"></Chart></Stack>
-    <Stack Style.Width="200" Style.Height="200"><Chart Style.Width="200" Style.Height="200" Id="piePlotView"></Chart></Stack>
+    <!--<Stack Style.Width="200" Style.Height="200">
+      <Chart Style.Width="200" Style.Height="200" Id="linePlotView"></Chart>
+    </Stack>
+    <Stack Style.Width="200" Style.Height="200">
+      <Chart Style.Width="200" Style.Height="200" Id="areaPlotView"></Chart>
+    </Stack>
+    <Stack Style.Width="200" Style.Height="200">
+      <Chart Style.Width="200" Style.Height="200" Id="piePlotView"></Chart>
+    </Stack>-->
+    <Stack Style.Width="200" Style.Height="200">
+      <Chart Style.Width="200" Style.Height="200" Id="barPlotView"></Chart>
+    </Stack>
   </Stack>
 
 </z-Component>
