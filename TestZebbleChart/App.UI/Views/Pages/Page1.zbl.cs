@@ -71,12 +71,26 @@ namespace UI.Pages
                 })
             };
 
+            //bar plotmodel
+            var columnPlotModel = new Chart.PlotModel
+            {
+                Title = "zebbleColumnChart",
+                Chart = new Chart.Column(new List<Chart.Item>
+                {
+                    new Chart.Item(25),
+                    new Chart.Item(137),
+                    new Chart.Item(13),
+                    new Chart.Item(40),
+                })
+            };
+
             await base.OnInitializing();
 
             //await linePlotView.Add(linePlotModel);
             //await areaPlotView.Add(areaPlotModel);
             //await piePlotView.Add(piePlotModel);
-            await barPlotView.Add(barPlotModel);
+            //await barPlotView.Add(barPlotModel);
+            await columnPlotView.Add(columnPlotModel);
         }
 
 

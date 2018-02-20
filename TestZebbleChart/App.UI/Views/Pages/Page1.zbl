@@ -14,8 +14,11 @@
     <Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="piePlotView"></Chart>
     </Stack>-->
-    <Stack Style.Width="200" Style.Height="200">
+    <!--<Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="barPlotView"></Chart>
+    </Stack>-->
+    <Stack Style.Width="200" Style.Height="200">
+      <Chart Style.Width="200" Style.Height="200" Id="columnPlotView"></Chart>
     </Stack>
   </Stack>
 
