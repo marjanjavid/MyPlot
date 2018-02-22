@@ -128,14 +128,39 @@ namespace UI.Pages
                 
             }
 
-            await base.OnInitializing();
+                //contour plotmodel
+                double x0 = -3.1;
+                double x1 = 3.1;
+                double y0 = -3;
+                double y1 = 3;
+
+                //generate values
+                Func<double, double, double> peaks = (x, y) =>
+               3 * (1 - x) * (1 - x) * Math.Exp(-(x * x) - (y + 1) * (y + 1))
+               - 10 * (x / 5 - x * x * x - y * y * y * y * y) * Math.Exp(-x * x - y * y)
+               - 1.0 / 3 * Math.Exp(-(x + 1) * (x + 1) - y * y);
+                var xx = ArrayBuilder.CreateVector(-3, 3, 0.05);
+                var yy = ArrayBuilder.CreateVector(-3.1, 3.1, 0.05);
+
+                var contourPlotModel = new Chart.PlotModel
+                {
+                    Title = "zebbleContourChart",
+                    Chart = new Chart.Contour()
+                    {
+                        Data= ArrayBuilder.Evaluate(peaks, xx, yy),
+                        ColumnCoordinates = xx,
+                        RowCoordinates = yy
+                    }                    
+                };
+                await base.OnInitializing();
 
             //await linePlotView.Add(linePlotModel);
             //await areaPlotView.Add(areaPlotModel);
             //await piePlotView.Add(piePlotModel);
             //await barPlotView.Add(barPlotModel);
             //await columnPlotView.Add(columnPlotModel);
-            await boxPlotView.Add(boxPlotModel);
+            //await boxPlotView.Add(boxPlotModel);
+                await contourPlotView.Add(contourPlotModel);
             }
             catch (Exception ex)
             {

@@ -20,8 +20,11 @@
     <!--<Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="columnPlotView"></Chart>
     </Stack>-->
-    <Stack Style.Width="200" Style.Height="200">
+    <!--<Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="boxPlotView"></Chart>
+    </Stack>-->
+<Stack Style.Width="400" Style.Height="200">
+      <Chart Style.Width="400" Style.Height="200" Id="contourPlotView"></Chart>
     </Stack>
   </Stack>
 
