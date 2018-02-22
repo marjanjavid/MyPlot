@@ -15,6 +15,10 @@ namespace UI.Pages
     {
         public override async Task OnInitializing()
         {
+            try
+            {
+
+            
             //line plotmodel
             var linePlotModel = new Chart.PlotModel
             {
@@ -71,7 +75,7 @@ namespace UI.Pages
                 })
             };
 
-            //bar plotmodel
+            //column plotmodel
             var columnPlotModel = new Chart.PlotModel
             {
                 Title = "zebbleColumnChart",
@@ -84,13 +88,60 @@ namespace UI.Pages
                 })
             };
 
+            //box plotmodel
+            var random = new Random(31);
+            const int boxes = 10;
+            var boxPlotModel = new Chart.PlotModel
+            {
+                Title = "zebbleBoxChart",
+                Chart = new Chart.Box()
+
+
+            };
+                ((Chart.Box)boxPlotModel.Chart).Data = new List<Chart.BoxPlotItem>();
+            for (var i = 0; i < boxes; i++)
+            {
+                double x = i;
+                var points = 5 + random.Next(15);
+                var values = new List<double>();
+                for (var j = 0; j < points; j++)
+                {
+                    values.Add(random.Next(0, 20));
+                }
+
+                values.Sort();
+                var median = Chart.Box.GetMedian(values);
+                var mean = values.Average();
+                int r = values.Count % 2;
+                double firstQuartil = Chart.Box.GetMedian(values.Take((values.Count + r) / 2));
+                double thirdQuartil = Chart.Box.GetMedian(values.Skip((values.Count - r) / 2));
+
+                var iqr = thirdQuartil - firstQuartil;
+                var step = iqr * 1.5;
+                var upperWhisker = thirdQuartil + step;
+                upperWhisker = values.Where(v => v <= upperWhisker).Max();
+                var lowerWhisker = firstQuartil - step;
+                lowerWhisker = values.Where(v => v >= lowerWhisker).Min();
+
+                var outliers = new[] { upperWhisker + random.Next(1, 10), lowerWhisker - random.Next(1, 10) };
+                ((Chart.Box)boxPlotModel.Chart).Data.Add(new Chart.BoxPlotItem(x, lowerWhisker, firstQuartil, median, thirdQuartil, upperWhisker));
+                
+            }
+
             await base.OnInitializing();
 
             //await linePlotView.Add(linePlotModel);
             //await areaPlotView.Add(areaPlotModel);
             //await piePlotView.Add(piePlotModel);
             //await barPlotView.Add(barPlotModel);
-            await columnPlotView.Add(columnPlotModel);
+            //await columnPlotView.Add(columnPlotModel);
+            await boxPlotView.Add(boxPlotModel);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
 
