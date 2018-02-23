@@ -17,14 +17,10 @@ namespace UI.Pages
         {
             try
             {
-
-            
-            //line plotmodel
-            var linePlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleLineChart",
-                Chart = new Chart.Line(new List<Chart.DataPoint>
-            {
+                //line plotmodel
+                var linePlotModel = new Chart.PlotModel { Title = "zebbleLineChart" };
+                linePlotModel.Chart.Add(new Chart.Line(new List<Chart.DataPoint>
+                {
                   new Chart.DataPoint(0.0, 6.0),
                   new Chart.DataPoint(1.4, 2.1),
                   new Chart.DataPoint(2.0, 4.2),
@@ -32,13 +28,11 @@ namespace UI.Pages
                   new Chart.DataPoint(4.7, 7.4),
                   new Chart.DataPoint(6.0, 6.2),
 
-            })
-            };
-            //area plotmodel
-            var areaPlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleAreaChart",
-                Chart = new Chart.Area(new List<Chart.DataPoint>
+                }));
+
+                //area plotmodel
+                var areaPlotModel = new Chart.PlotModel{Title = "zebbleAreaChart"};
+                areaPlotModel.Chart.Add(new Chart.Area(new List<Chart.DataPoint>
                 {
                     new Chart.DataPoint(0, 50),
                     new Chart.DataPoint(10, 40),
@@ -46,87 +40,73 @@ namespace UI.Pages
                     new Chart.DataPoint(0, 60),
                     new Chart.DataPoint(5, 80),
                     new Chart.DataPoint(20, 70)
-                })
-            };
-            //pie plotmodel
-            var piePlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleAreaChart",
-                Chart = new Chart.Pie(new List<Chart.PieSlice>
+                }));
+
+                //pie plotmodel
+                var piePlotModel = new Chart.PlotModel{Title = "zebbleAreaChart"};
+                piePlotModel.Chart.Add(new Chart.Pie(new List<Chart.PieSlice>
                 {
                     new Chart.PieSlice("Africa", 1030),
                     new Chart.PieSlice("Americas", 929),
                     new Chart.PieSlice("Asia", 4157),
                     new Chart.PieSlice("Europe", 739),
                     new Chart.PieSlice("Oceania", 35)
-                })
-            };
+                }));
 
-            //bar plotmodel
-            var barPlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleBarChart",
-                Chart = new Chart.Bar(new List<Chart.Item>
+                //bar plotmodel
+                var barPlotModel = new Chart.PlotModel{Title = "zebbleBarChart"};
+                barPlotModel.Chart.Add(new Chart.Bar(new List<Chart.Item>
                 {
                     new Chart.Item(25),
                     new Chart.Item(137),
                     new Chart.Item(13),
                     new Chart.Item(40),
-                })
-            };
+                }));
 
-            //column plotmodel
-            var columnPlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleColumnChart",
-                Chart = new Chart.Column(new List<Chart.Item>
+                //column plotmodel
+                var columnPlotModel = new Chart.PlotModel{Title = "zebbleColumnChart"};
+                columnPlotModel.Chart.Add(new Chart.Column(new List<Chart.Item>
                 {
                     new Chart.Item(25),
                     new Chart.Item(137),
                     new Chart.Item(13),
                     new Chart.Item(40),
-                })
-            };
+                }));
 
-            //box plotmodel
-            var random = new Random(31);
-            const int boxes = 10;
-            var boxPlotModel = new Chart.PlotModel
-            {
-                Title = "zebbleBoxChart",
-                Chart = new Chart.Box()
-
-
-            };
-                ((Chart.Box)boxPlotModel.Chart).Data = new List<Chart.BoxPlotItem>();
-            for (var i = 0; i < boxes; i++)
-            {
-                double x = i;
-                var points = 5 + random.Next(15);
-                var values = new List<double>();
-                for (var j = 0; j < points; j++)
+                //box plotmodel
+                var random = new Random(31);
+                const int boxes = 10;
+                var boxPlotModel = new Chart.PlotModel{Title = "zebbleBoxChart"};
+                var list = new List<Chart.BoxPlotItem>();
+                for (var i = 0; i < boxes; i++)
                 {
-                    values.Add(random.Next(0, 20));
+                    double myxx = i;
+                    var points = 5 + random.Next(15);
+                    var values = new List<double>();
+                    for (var j = 0; j < points; j++)
+                    {
+                        values.Add(random.Next(0, 20));
+                    }
+
+                    values.Sort();
+                    var median = Chart.Box.GetMedian(values);
+                    var mean = values.Average();
+                    int r = values.Count % 2;
+                    double firstQuartil = Chart.Box.GetMedian(values.Take((values.Count + r) / 2));
+                    double thirdQuartil = Chart.Box.GetMedian(values.Skip((values.Count - r) / 2));
+
+                    var iqr = thirdQuartil - firstQuartil;
+                    var step = iqr * 1.5;
+                    var upperWhisker = thirdQuartil + step;
+                    upperWhisker = values.Where(v => v <= upperWhisker).Max();
+                    var lowerWhisker = firstQuartil - step;
+                    lowerWhisker = values.Where(v => v >= lowerWhisker).Min();
+
+                    var outliers = new[] { upperWhisker + random.Next(1, 10), lowerWhisker - random.Next(1, 10) };
+                    list.Add(new Chart.BoxPlotItem(myxx, lowerWhisker, firstQuartil, median, thirdQuartil, upperWhisker));
+
                 }
-
-                values.Sort();
-                var median = Chart.Box.GetMedian(values);
-                var mean = values.Average();
-                int r = values.Count % 2;
-                double firstQuartil = Chart.Box.GetMedian(values.Take((values.Count + r) / 2));
-                double thirdQuartil = Chart.Box.GetMedian(values.Skip((values.Count - r) / 2));
-
-                var iqr = thirdQuartil - firstQuartil;
-                var step = iqr * 1.5;
-                var upperWhisker = thirdQuartil + step;
-                upperWhisker = values.Where(v => v <= upperWhisker).Max();
-                var lowerWhisker = firstQuartil - step;
-                lowerWhisker = values.Where(v => v >= lowerWhisker).Min();
-
-                var outliers = new[] { upperWhisker + random.Next(1, 10), lowerWhisker - random.Next(1, 10) };
-                ((Chart.Box)boxPlotModel.Chart).Data.Add(new Chart.BoxPlotItem(x, lowerWhisker, firstQuartil, median, thirdQuartil, upperWhisker));
-                
-            }
+                boxPlotModel.Chart.Add(new Chart.Box(list));
 
                 //contour plotmodel
                 double x0 = -3.1;
@@ -142,25 +122,40 @@ namespace UI.Pages
                 var xx = ArrayBuilder.CreateVector(-3, 3, 0.05);
                 var yy = ArrayBuilder.CreateVector(-3.1, 3.1, 0.05);
 
-                var contourPlotModel = new Chart.PlotModel
+                var contourPlotModel = new Chart.PlotModel { Title = "zebbleContourChart" };
+
+                contourPlotModel.Chart.Add(new Chart.Contour()
                 {
-                    Title = "zebbleContourChart",
-                    Chart = new Chart.Contour()
-                    {
-                        Data= ArrayBuilder.Evaluate(peaks, xx, yy),
-                        ColumnCoordinates = xx,
-                        RowCoordinates = yy
-                    }                    
-                };
+                    Data = ArrayBuilder.Evaluate(peaks, xx, yy),
+                    ColumnCoordinates = xx,
+                    RowCoordinates = yy
+                });
+
+
+                //RectangleBar plotmodel
+                var rectangleBarPlotModel = new Chart.PlotModel{Title = "RectangleBarChart"};
+
+                rectangleBarPlotModel.Chart.Add(new Chart.RectangleBar("RectangleBarSeries 1",new List<Chart.RectangleBarItem>
+                {
+                    new Chart.RectangleBarItem(){ X0 = 2, X1 = 8, Y0 = 1, Y1 = 4},
+                    new Chart.RectangleBarItem(){ X0 = 6, X1 = 12, Y0 = 6, Y1 = 7},
+                }));
+
+                rectangleBarPlotModel.Chart.Add(new Chart.RectangleBar("RectangleBarSeries 2",new List<Chart.RectangleBarItem>
+                {
+                    new Chart.RectangleBarItem(){ X0 = 2, X1 = 8, Y0 = -4, Y1 = -1},
+                    new Chart.RectangleBarItem(){ X0 = 6, X1 = 12, Y0 = -7, Y1 = -6},
+                }));
                 await base.OnInitializing();
 
-            //await linePlotView.Add(linePlotModel);
-            //await areaPlotView.Add(areaPlotModel);
-            //await piePlotView.Add(piePlotModel);
-            //await barPlotView.Add(barPlotModel);
-            //await columnPlotView.Add(columnPlotModel);
-            //await boxPlotView.Add(boxPlotModel);
-                await contourPlotView.Add(contourPlotModel);
+                //await linePlotView.Add(linePlotModel);
+                //await areaPlotView.Add(areaPlotModel);
+                //await piePlotView.Add(piePlotModel);
+                //await barPlotView.Add(barPlotModel);
+                //await columnPlotView.Add(columnPlotModel);
+                //await boxPlotView.Add(boxPlotModel);
+                //await contourPlotView.Add(contourPlotModel);
+                await rectangleBarPlotView.Add(rectangleBarPlotModel);
             }
             catch (Exception ex)
             {
