@@ -19,7 +19,7 @@ namespace UI.Pages
             {
                 //line plotmodel
                 var linePlotModel = new Chart.PlotModel { Title = "zebbleLineChart" };
-                linePlotModel.Chart.Add(new Chart.Line(new List<Chart.DataPoint>
+                linePlotModel.Series.Add(new Chart.Line(new List<Chart.DataPoint>
                 {
                   new Chart.DataPoint(0.0, 6.0),
                   new Chart.DataPoint(1.4, 2.1),
@@ -32,7 +32,7 @@ namespace UI.Pages
 
                 //area plotmodel
                 var areaPlotModel = new Chart.PlotModel{Title = "zebbleAreaChart"};
-                areaPlotModel.Chart.Add(new Chart.Area(new List<Chart.DataPoint>
+                areaPlotModel.Series.Add(new Chart.Area(new List<Chart.DataPoint>
                 {
                     new Chart.DataPoint(0, 50),
                     new Chart.DataPoint(10, 40),
@@ -44,7 +44,7 @@ namespace UI.Pages
 
                 //pie plotmodel
                 var piePlotModel = new Chart.PlotModel{Title = "zebbleAreaChart"};
-                piePlotModel.Chart.Add(new Chart.Pie(new List<Chart.PieSlice>
+                piePlotModel.Series.Add(new Chart.Pie(new List<Chart.PieSlice>
                 {
                     new Chart.PieSlice("Africa", 1030),
                     new Chart.PieSlice("Americas", 929),
@@ -55,7 +55,7 @@ namespace UI.Pages
 
                 //bar plotmodel
                 var barPlotModel = new Chart.PlotModel{Title = "zebbleBarChart"};
-                barPlotModel.Chart.Add(new Chart.Bar(new List<Chart.Item>
+                barPlotModel.Series.Add(new Chart.Bar(new List<Chart.Item>
                 {
                     new Chart.Item(25),
                     new Chart.Item(137),
@@ -65,7 +65,7 @@ namespace UI.Pages
 
                 //column plotmodel
                 var columnPlotModel = new Chart.PlotModel{Title = "zebbleColumnChart"};
-                columnPlotModel.Chart.Add(new Chart.Column(new List<Chart.Item>
+                columnPlotModel.Series.Add(new Chart.Column(new List<Chart.Item>
                 {
                     new Chart.Item(25),
                     new Chart.Item(137),
@@ -106,7 +106,7 @@ namespace UI.Pages
                     list.Add(new Chart.BoxPlotItem(myxx, lowerWhisker, firstQuartil, median, thirdQuartil, upperWhisker));
 
                 }
-                boxPlotModel.Chart.Add(new Chart.Box(list));
+                boxPlotModel.Series.Add(new Chart.Box(list));
 
                 //contour plotmodel
                 double x0 = -3.1;
@@ -124,7 +124,7 @@ namespace UI.Pages
 
                 var contourPlotModel = new Chart.PlotModel { Title = "zebbleContourChart" };
 
-                contourPlotModel.Chart.Add(new Chart.Contour()
+                contourPlotModel.Series.Add(new Chart.Contour()
                 {
                     Data = ArrayBuilder.Evaluate(peaks, xx, yy),
                     ColumnCoordinates = xx,
@@ -135,27 +135,46 @@ namespace UI.Pages
                 //RectangleBar plotmodel
                 var rectangleBarPlotModel = new Chart.PlotModel{Title = "RectangleBarChart"};
 
-                rectangleBarPlotModel.Chart.Add(new Chart.RectangleBar("RectangleBarSeries 1",new List<Chart.RectangleBarItem>
+                rectangleBarPlotModel.Series.Add(new Chart.RectangleBar("RectangleBarSeries 1",new List<Chart.RectangleBarItem>
                 {
                     new Chart.RectangleBarItem(){ X0 = 2, X1 = 8, Y0 = 1, Y1 = 4},
                     new Chart.RectangleBarItem(){ X0 = 6, X1 = 12, Y0 = 6, Y1 = 7},
                 }));
 
-                rectangleBarPlotModel.Chart.Add(new Chart.RectangleBar("RectangleBarSeries 2",new List<Chart.RectangleBarItem>
+                rectangleBarPlotModel.Series.Add(new Chart.RectangleBar("RectangleBarSeries 2",new List<Chart.RectangleBarItem>
                 {
                     new Chart.RectangleBarItem(){ X0 = 2, X1 = 8, Y0 = -4, Y1 = -1},
                     new Chart.RectangleBarItem(){ X0 = 6, X1 = 12, Y0 = -7, Y1 = -6},
                 }));
+
+
+                //TwoColorLine plotmodel
+
+                var temperatures = new[] { 5, 0, 7, 7, 4, 3, 5, 5, 11, 4, 2, 3, 2, 1, 0, 2, -1, 0, 0, -3, -6, -13, -10, -10, 0, -4, -5, -4, 3, 0, -5 };
+                var dataPoints = new List<Chart.DataPoint>();
+                for (int i = 0; i < temperatures.Length; i++)
+                {
+                    dataPoints.Add(new Chart.DataPoint(i + 1, temperatures[i]));
+                }
+                var twoColorLinePlotModel = new Chart.PlotModel { Title = "TwoColorLineChart" };
+                twoColorLinePlotModel.Series.Add(new Chart.TwoColorLine() {
+                    Color = Colors.Red ,
+                    Color2 = Colors.LightBlue,
+                    Limit = 0,
+                    Data= dataPoints
+                });
+                
                 await base.OnInitializing();
 
-                //await linePlotView.Add(linePlotModel);
+                // await linePlotView.Add(linePlotModel);
                 //await areaPlotView.Add(areaPlotModel);
                 //await piePlotView.Add(piePlotModel);
                 //await barPlotView.Add(barPlotModel);
                 //await columnPlotView.Add(columnPlotModel);
                 //await boxPlotView.Add(boxPlotModel);
                 //await contourPlotView.Add(contourPlotModel);
-                await rectangleBarPlotView.Add(rectangleBarPlotModel);
+                //await rectangleBarPlotView.Add(rectangleBarPlotModel);
+                await twoColorLinePlotView.Add(twoColorLinePlotModel);
             }
             catch (Exception ex)
             {

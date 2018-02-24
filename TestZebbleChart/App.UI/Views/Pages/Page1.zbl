@@ -5,9 +5,11 @@
     xsi:noNamespaceSchemaLocation="./../.zebble-schema.xml">
 
   <Stack Style.Width="400" Style.Height="900" Direction="Vertical">
+   
     <!--<Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="linePlotView"></Chart>
-    </Stack>
+    </Stack>-->
+    <!--
     <Stack Style.Width="200" Style.Height="200">
       <Chart Style.Width="200" Style.Height="200" Id="areaPlotView"></Chart>
     </Stack>
@@ -26,8 +28,11 @@
 <!--<Stack Style.Width="400" Style.Height="200">
       <Chart Style.Width="400" Style.Height="200" Id="contourPlotView"></Chart>
     </Stack>-->
-  <Stack Style.Width="400" Style.Height="200">
+  <!--<Stack Style.Width="400" Style.Height="200">
       <Chart Style.Width="400" Style.Height="200" Id="rectangleBarPlotView"></Chart>
+    </Stack>-->
+  <Stack Style.Width="400" Style.Height="200">
+      <Chart Style.Width="400" Style.Height="200" Id="twoColorLinePlotView"></Chart>
     </Stack>
   </Stack>
 
