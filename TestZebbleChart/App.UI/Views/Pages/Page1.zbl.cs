@@ -163,7 +163,24 @@ namespace UI.Pages
                     Limit = 0,
                     Data= dataPoints
                 });
-                
+
+                //twoColorAreaPlotModel
+                var areaTemperatures = new[] { 5, 0, 7, 7, 4, 3, 5, 5, 11, 4, 2, 3, 2, 1, 0, 2, -1, 0, 0, -3, -6, -13, -10, -10, 0, -4, -5, -4, 3, 0, -5 };
+
+                var areadataPoints = new List<Chart.DataPoint>();
+                for (int i = 0; i < temperatures.Length; i++)
+                {
+                    dataPoints.Add(new Chart.DataPoint(i + 1, temperatures[i]));
+                }
+                var twoColorAreaPlotModel = new Chart.PlotModel { Title = "TwoColorAreaChart" };
+                twoColorAreaPlotModel.Series.Add(new Chart.TwoColorArea()
+                {
+                    Color = Colors.Tomato,
+                    Color2 = Colors.LightBlue,
+                    Limit = -1,
+                    Data = dataPoints
+                });
+
                 await base.OnInitializing();
 
                 // await linePlotView.Add(linePlotModel);
@@ -174,7 +191,8 @@ namespace UI.Pages
                 //await boxPlotView.Add(boxPlotModel);
                 //await contourPlotView.Add(contourPlotModel);
                 //await rectangleBarPlotView.Add(rectangleBarPlotModel);
-                await twoColorLinePlotView.Add(twoColorLinePlotModel);
+                //await twoColorLinePlotView.Add(twoColorLinePlotModel);
+                await twoColorAreaPlotView.Add(twoColorAreaPlotModel);
             }
             catch (Exception ex)
             {
