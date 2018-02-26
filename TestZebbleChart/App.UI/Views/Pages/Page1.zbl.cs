@@ -43,7 +43,7 @@ namespace UI.Pages
                 }));
 
                 //pie plotmodel
-                var piePlotModel = new Chart.PlotModel{Title = "zebbleAreaChart"};
+                var piePlotModel = new Chart.PlotModel{Title = "zebblePieChart"};
                 piePlotModel.Series.Add(new Chart.Pie(new List<Chart.PieSlice>
                 {
                     new Chart.PieSlice("Africa", 1030),
@@ -181,6 +181,32 @@ namespace UI.Pages
                     Data = dataPoints
                 });
 
+                //errorColumnPlotModel
+                var errorColumnPlotModel = new Chart.PlotModel { Title = "ErrorColumnChart" };
+
+                errorColumnPlotModel.Series.Add(new Chart.ErrorColumn()
+                {
+                    Title = "Series 1",
+                    Data = new List<Chart.ErrorColumnItem>
+                {
+                    new Chart.ErrorColumnItem(){ Value = 25, Error = 2},
+                    new Chart.ErrorColumnItem(){ Value = 137, Error = 25 },
+                    new Chart.ErrorColumnItem(){ Value = 18, Error = 4 },
+                    new Chart.ErrorColumnItem(){ Value = 40, Error = 29 },
+                }
+                });
+
+                errorColumnPlotModel.Series.Add(new Chart.ErrorColumn()
+                {
+                    Title = "Series 2",
+                    Data = new List<Chart.ErrorColumnItem>
+                {
+                    new Chart.ErrorColumnItem(){ Value = 35, Error = 20},
+                    new Chart.ErrorColumnItem(){ Value = 17, Error = 7  },
+                    new Chart.ErrorColumnItem(){ Value = 118, Error = 44 },
+                    new Chart.ErrorColumnItem(){ Value = 49, Error = 29 },
+                }
+                });
                 await base.OnInitializing();
 
                 // await linePlotView.Add(linePlotModel);
@@ -192,7 +218,8 @@ namespace UI.Pages
                 //await contourPlotView.Add(contourPlotModel);
                 //await rectangleBarPlotView.Add(rectangleBarPlotModel);
                 //await twoColorLinePlotView.Add(twoColorLinePlotModel);
-                await twoColorAreaPlotView.Add(twoColorAreaPlotModel);
+                //await twoColorAreaPlotView.Add(twoColorAreaPlotModel);
+                await ErrorColumnPlotView.Add(errorColumnPlotModel);
             }
             catch (Exception ex)
             {
