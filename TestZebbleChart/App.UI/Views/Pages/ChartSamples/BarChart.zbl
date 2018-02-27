@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<z-Component z-type="BarChart" z-base="NavBarPage" z-namespace="UI.Pages" Title="BarChart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body">
+    <Stack >
+      <Chart  Id="barPlotView"></Chart>
+    </Stack>
+  </z-place>
+</z-Component>

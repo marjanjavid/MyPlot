@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.PushNotification.Android</name>
+    </assembly>
+    <members>
+        <member name="F:Zebble.Device.PushNotification.ReceivedMessage">
+            <summary>The event parameter contains the values.</summary>
+        </member>
+        <member name="F:Zebble.Device.PushNotification.Registered">
+            <summary>
+            When first an installed app registers to receive push notifications,
+            it will contact the Apple, Google or Microsoft Push Notification service to receive a token.
+            Then this event (Registered) will be fired.
+            You should handle this method in your app code to call your own service API,
+            and register the app installation token with the user record (whatever it is in your domain).
+            NOTE: Make sure to send the platform name as well, so that when later on you're trying to send push notifications to this user, you know which push notification service to send it to.
+            </summary>
+        </member>
+        <member name="F:Zebble.Device.PushNotification.UnRegistered">
+            <summary>
+            This event is fired when the user opts out of receiving push notifications.
+            You should invoke your service API to remove the push notification token
+            from the app user record (whatever it is in your domain) for this device.
+            </summary>
+        </member>
+        <member name="F:Zebble.Device.PushNotification.ReceivedError">
+            <summary>Thsi event is fired when something goes wrong.
+            The event parameter is the error message.</summary>
+        </member>
+    </members>
+</doc>

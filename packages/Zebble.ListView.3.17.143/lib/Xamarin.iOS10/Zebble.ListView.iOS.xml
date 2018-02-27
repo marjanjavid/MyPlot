@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.ListView.iOS</name>
+    </assembly>
+    <members>
+        <member name="M:Zebble.ListView`2.Add(`0)">
+            <summary>
+            Adds a new Item to the List and also adds it to the DataSource
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Zebble.ListView`2.Remove(`0,System.Boolean)">
+            <summary>
+            Removes an Items from the list and its DataSource
+            </summary>
+            <param name="item"></param>
+            <param name="awaitNative"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Zebble.ListView`2.LazyLoadEnded">
+            <summary>
+            This event will be fired when all datasource items are rendered and added to the list. 
+            </summary>
+        </member>
+    </members>
+</doc>

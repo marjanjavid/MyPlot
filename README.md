@@ -1,2 +1,0 @@
-# MyPlot
-Use ZebbleChart

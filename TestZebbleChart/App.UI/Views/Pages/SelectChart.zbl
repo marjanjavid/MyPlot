@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<z-Component z-type="SelectChart" z-base="NavBarPage" z-namespace="UI.Pages" Title="SelectChart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../.zebble-schema.xml">
+  <z-place inside="Body">
+    <Stack Direction="Vertical">
+      <Stack Direction="Horizontal">
+        <Button Id="btnShowLineChart" z-nav-forward="Pages.LineChart" Text="ShowLineChart" Style.BackgroundColor ="LightBlue" Style.Border="1"  Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowPieChart" z-nav-forward="Pages.PieChart" Text="ShowPieChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1"  Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowAreaChart" z-nav-forward="Pages.AreaChart" Text="ShowAreaChart" Style.BackgroundColor ="LightBlue" Style.Border="1"  Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowBarChart" z-nav-forward="Pages.BarChart" Text="ShowBarChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowColumnChart" z-nav-forward="Pages.ColumnChart" Text="ShowColumnChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowBoxChart" z-nav-forward="Pages.BoxChart" Text="ShowBoxChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowContourChart" z-nav-forward="Pages.ContourChart" Text="ShowContourChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowRectangleBarChart" z-nav-forward="Pages.RectangleBarChart" Text="ShowRectangleBarChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowTwoColorLineChart" z-nav-forward="Pages.TwoColorLineChart" Text="ShowTwoColorLineChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+      <Stack>
+        <Button Id="btnShowErrorColumnChart" z-nav-forward="Pages.ErrorColumnChart" Text="ShowErrorColumnChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
+    </Stack>
+  </z-place>
+</z-Component>

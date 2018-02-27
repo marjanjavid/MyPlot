@@ -140,103 +140,144 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Zebble.CheckBox.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.CheckBox.1.22.110\lib\Xamarin.iOS10\Zebble.CheckBox.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.DateTimePicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.DateTimePicker.4.5.275\lib\Xamarin.iOS10\Zebble.DateTimePicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.Grid.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Grid.3.12.148\lib\Xamarin.iOS10\Zebble.Grid.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.IconButton.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.IconButton.3.20.268\lib\Xamarin.iOS10\Zebble.IconButton.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.4.104\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.4.100\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.ItemPicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.ItemPicker.3.12.155\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.ListView.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.ListView.3.17.143\lib\Xamarin.iOS10\Zebble.ListView.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.LocalNotification.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.LocalNotification.1.0.103\lib\Xamarin.iOS10\Zebble.LocalNotification.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.NavBarTabs.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.NavBarTabs.2.6.339\lib\Xamarin.iOS10\Zebble.NavBarTabs.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.OptionsList.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.123\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Plugin.Chart.iOS">
-      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
+      <HintPath>..\..\..\..\..\Projects\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.PushNotification.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.PushNotification.4.0.176\lib\Xamarin.iOS10\Zebble.PushNotification.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.SearchInput.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.SearchInput.3.18.266\lib\Xamarin.iOS10\Zebble.SearchInput.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Zebble.Switch.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zebble.Switch.1.31.235\lib\Xamarin.iOS10\Zebble.Switch.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.WebApi.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.277\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.WebApi.4.5.276\lib\Xamarin.iOS10\Zebble.WebApi.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
-    <Content Include="Zebble-LicenseAgreement.txt" />
-    <EmbeddedResource Include="Resources\Icon-76%402x.png">
+    <BundleResource Include="Resources\Icon-76%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-76.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-76.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-60%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-60%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-Small.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-Small.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-Small%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-Small%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\1024x1024.png">
+    </BundleResource>
+    <BundleResource Include="Resources\1024x1024.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-568h%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-568h%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-667h%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-667h%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-Landscape.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Landscape.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-Landscape~ipad.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Landscape~ipad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-Portrait-736h%403x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Portrait-736h%403x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-Portrait.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Portrait.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default-Portrait%402x~ipad.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default-Portrait%402x~ipad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default~ipad.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default~ipad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default1024x768.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default1024x768.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Default768x1024.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Default768x1024.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-120.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-120.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-40.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-40.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-40%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-40%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-40%403x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-40%403x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-60.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-60.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-60%403x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-60%403x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-83.5%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-83.5%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Icon-Small%403x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\Icon-Small%403x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\iTunesArtwork%402x.png">
+    </BundleResource>
+    <BundleResource Include="Resources\iTunesArtwork%402x.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\iTunesArtwork.png">
+    </BundleResource>
+    <BundleResource Include="Resources\iTunesArtwork.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </BundleResource>
+    <BundleResource Include="Resources\Launch-Bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Splash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />
@@ -244,5 +285,8 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="zebbleExe generate" BeforeTargets="BeforeBuild">
     <Exec Command="&quot;$(ProjectDir)..\Android\Zebble.exe&quot; generate auto" />
+  </Target>
+  <Target Name="Update XML Schema" AfterTargets="AfterBuild">
+    <Exec Command="&quot;$(ProjectDir)..\Android\Zebble&quot; update-schema auto" />
   </Target>
 </Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.NavBarTabs.Android</name>
+    </assembly>
+    <members>
+        <member name="M:Zebble.NavBarPage.ShowMenuDespiteBackButton">
+            <summary>
+            Determines whether the menu should be displayed even if a back button is displayed.
+            </summary>
+        </member>
+        <member name="F:Zebble.Tabs.Tab.UseNavForward">
+            <summary>
+            When set true uses the Nav.Forward() for navigating. Otherwise it will be a Nav.Go()
+            </summary>
+        </member>
+        <member name="M:Zebble.Tabs.Tab.SetSelected(System.Boolean)">
+            <summary>
+            This is the same as setting the Selected property, but allows you to await it.
+            </summary>
+        </member>
+    </members>
+</doc>

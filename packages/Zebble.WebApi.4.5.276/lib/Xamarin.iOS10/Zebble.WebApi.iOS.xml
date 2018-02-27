@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zebble.WebApi.iOS</name>
+    </assembly>
+    <members>
+        <member name="M:Zebble.BaseApi.Url(System.String[])">
+            <summary>
+            Returns a full absolute URL for a specified relativeUrl.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.DisposeCache">
+            <summary>
+            Deletes all cached Get API results.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.DisposeCache``1(System.String)">
+            <summary>
+            Deletes the cached Get API result for the specified API url.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.RequestInfo.Send">
+            <summary>
+            Sends this request to the server and processes the response.
+            The error action will also apply.
+            It will return whether the response was successfully received.
+            </summary>
+        </member>
+        <member name="M:Zebble.BaseApi.RequestInfo.Send``2(``0)">
+            <summary>
+            Sends this request to the server and processes the response.
+            The error action will also apply.
+            It will return whether the response was successfully received.
+            </summary>
+        </member>
+        <member name="T:Zebble.IQueueable`1">
+            <summary>
+            Represents an Queueable Entity with unique identifier.
+            </summary>
+        </member>
+        <member name="P:Zebble.IQueueable`1.ID">
+            <summary>
+            The unique identifiere.
+            </summary>
+        </member>
+        <member name="P:Zebble.IQueueable`1.Status">
+            <summary>
+            Gets the ID of this entity.
+            </summary>     
+        </member>
+        <member name="P:Zebble.IQueueable`1.TimeAdded">
+            <summary>
+            Time Item added to Queue
+            </summary>  
+        </member>
+        <member name="P:Zebble.IQueueable`1.TimeUpdated">
+            <summary>
+            Latest update time of Item status in Queue
+            </summary>  
+        </member>
+        <member name="P:Zebble.IQueueable`1.RequestInfo">
+            <summary>
+            Request info that should be sent when the app got connected to network
+            </summary>  
+        </member>
+    </members>
+</doc>

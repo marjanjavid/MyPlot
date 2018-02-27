@@ -2,7 +2,9 @@
 {
     using System;
     using System.Threading.Tasks;
+    using Domain;
     using Zebble;
+    using Zebble.Services;
     using Zebble.Device;
 
     public partial class StartUp : Zebble.StartUp
@@ -14,8 +16,11 @@
             await InstallIfNeeded();
 
             CssStyles.LoadAll();
+            ImageService.MemoryCacheFolder("Images");
 
             App.ReceivedMemoryWarning += CleanUpMemory;
+
+            Services.PushNotificationListener.Initialize();
 
             LoadFirstPage().RunInParallel();
         }
@@ -31,6 +36,6 @@
             // Tip: You can detect potential memory leaks by using a tool such as DotMemory from Jet Brains.
         }
 
-        public static Task LoadFirstPage() => Nav.Go(new Pages.Page1());
+        static Task LoadFirstPage() => Nav.Go<Pages.Welcome>();
     }
 }

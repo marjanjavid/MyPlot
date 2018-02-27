@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~Android", "TestZebbleChart
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~iOS", "TestZebbleChart\Run\iOS\~iOS.csproj", "{3B21A769-F17C-4219-A595-27A34955228F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB802F83-E581-4C4B-9B16-7D00D66C9329}"
+ProjectSection(SolutionItems) = preProject
+GCop.json = GCop.json
+EndProjectSection
+EndProject
+
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TestZebbleChart\App.Domain\Domain.projitems*{38e83e4d-f88c-40c0-9528-9c818b0eaf42}*SharedItemsImports = 13
@@ -229,6 +235,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {197B7FFA-CD26-4C9C-A825-58511344B490}
+		SolutionGuid = {1D12240C-5DC8-4FEA-8393-B1FA676C7BE9}
 	EndGlobalSection
 EndGlobal

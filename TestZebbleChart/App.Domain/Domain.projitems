@@ -8,7 +8,15 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Domain</Import_RootNamespace>
   </PropertyGroup>
+   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\ContactType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\User.cs" />
+     <Compile Include="$(MSBuildThisFileDirectory)Services\Api.Authentication.cs" />
+     <Compile Include="$(MSBuildThisFileDirectory)Services\Api.ContactTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Api.Contacts.cs" />
+  </ItemGroup>
   <ItemGroup>
-	  <Compile Include="$(MSBuildThisFileDirectory)Class1.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)-Logic\" />
   </ItemGroup>
 </Project>
