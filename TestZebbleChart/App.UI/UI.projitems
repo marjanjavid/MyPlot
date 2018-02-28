@@ -130,6 +130,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\FunctionChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\HeatMapChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\HeatMapChart.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\HighLowChart.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\HighLowChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\LineChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\LineChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\PieChart.zbl" />

@@ -41,6 +41,9 @@
       <Stack>
         <Button Id="btnShowHeatMapChart" z-nav-forward="Pages.HeatMapChart" Text="ShowHeatMapChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
       </Stack>
+      <Stack>
+        <Button Id="btnShowHighLowChart" z-nav-forward="Pages.HighLowChart" Text="ShowHighLowChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
     </Stack>
   </z-place>
 </z-Component>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<z-Component z-type="HighLowChart" z-base="NavBarPage" z-namespace="UI.Pages" Title="HighLowChart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+  <z-place inside="Body">
+    <Chart Id="highLowPlotView"></Chart>
+  </z-place>
+</z-Component>
