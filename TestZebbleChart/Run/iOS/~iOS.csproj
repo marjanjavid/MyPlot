@@ -153,7 +153,7 @@
       <HintPath>..\..\..\packages\Zebble.IconButton.3.20.268\lib\Xamarin.iOS10\Zebble.IconButton.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Zebble.4.4.100\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+      <HintPath>..\..\..\packages\Zebble.4.4.105\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ItemPicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.ItemPicker.3.12.155\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
@@ -278,6 +278,7 @@
     <BundleResource Include="Resources\Splash.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <Content Include="Zebble-LicenseAgreement.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\..\App.Domain\Domain.projitems" Label="Shared" Condition="Exists('..\..\App.Domain\Domain.projitems')" />

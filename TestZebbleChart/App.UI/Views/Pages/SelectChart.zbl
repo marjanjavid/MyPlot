@@ -32,6 +32,9 @@
       <Stack>
         <Button Id="btnShowErrorColumnChart" z-nav-forward="Pages.ErrorColumnChart" Text="ShowErrorColumnChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
       </Stack>
+      <Stack>
+        <Button Id="btnShowCandleStickChart" z-nav-forward="Pages.CandleStickChart" Text="ShowCandleStickChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
     </Stack>
   </z-place>
 </z-Component>

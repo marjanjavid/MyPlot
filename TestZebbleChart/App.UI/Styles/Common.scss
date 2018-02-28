@@ -21,12 +21,12 @@ IconButton { opacity: 1;
     #Icon { }
 }
 
-PopUp, Waiting-Indicator { margin-top: calc("View.Root.Height, view.Height, (r,h) => (r - h) / 2"); }
+PopUp { margin-top: calc("View.Root.Height, view.Height, (r,h) => (r - h) / 2"); }
 PopUp {
     #HeaderTitle, #Title { font-size: 20px; }
 }
 
-Waiting-Indicator #Image { background: url(Images/icons/Spinner.gif); }
+/*Waiting-Indicator #Image { background: url(Images/icons/Spinner.gif); }*/
 
 /*Dialogs ----------------*/
 Prompt {

@@ -118,6 +118,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\BarChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\BoxChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\BoxChart.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\CandleStickChart.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\CandleStickChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ColumnChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ColumnChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ContourChart.zbl" />
