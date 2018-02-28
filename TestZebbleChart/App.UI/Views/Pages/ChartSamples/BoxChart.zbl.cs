@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using Zebble;
     using Domain;
+    using OxyPlot.Axes;
 
     partial class BoxChart
     {
@@ -45,6 +46,8 @@
 
             }
             boxPlotModel.Series.Add(new Chart.Box(list));
+            boxPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left });
+            boxPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, MinimumPadding = 0.1, MaximumPadding = 0.1 });
             await base.OnInitializing();
             await boxPlotView.Add(boxPlotModel);
         }

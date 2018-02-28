@@ -7,11 +7,13 @@
     using System.Threading.Tasks;
     using Zebble;
     using Domain;
+    using OxyPlot.Axes;
 
     partial class LineChart
     {
         public override async Task OnInitializing()
         {
+           
             var linePlotModel = new Chart.PlotModel { Title = "zebbleLineChart" };
             linePlotModel.Series.Add(new Chart.Line(new List<Chart.DataPoint>
                 {
@@ -24,7 +26,10 @@
 
                 }));
             await base.OnInitializing();
+            linePlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C" });
+            linePlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
             await linePlotView.Add(linePlotModel);
+           
         }
     }
 }

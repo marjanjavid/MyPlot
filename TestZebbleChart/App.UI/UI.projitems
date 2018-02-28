@@ -130,8 +130,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\PieChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\RectangleBarChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\RectangleBarChart.zbl.cs" />
-    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ShowTwoColorAreaChart.zbl" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ShowTwoColorAreaChart.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\TwoColorAreaChart.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\TwoColorAreaChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\TwoColorLineChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\TwoColorLineChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\SelectChart.zbl" />

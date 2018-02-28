@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using Zebble;
     using Domain;
+    using OxyPlot.Axes;
 
     partial class ErrorColumnChart
     {
@@ -37,6 +38,17 @@
                     new Chart.ErrorColumnItem(){ Value = 49, Error = 29 },
                 }
             });
+
+            var categoryAxis = new CategoryAxis { Position = AxisPosition.Bottom };
+            categoryAxis.Labels.Add("Category A");
+            categoryAxis.Labels.Add("Category B");
+            categoryAxis.Labels.Add("Category C");
+            categoryAxis.Labels.Add("Category D");
+
+            var valueAxis = new LinearAxis { Position = AxisPosition.Left, MinimumPadding = 0, MaximumPadding = 0.06, AbsoluteMinimum = 0 };
+            errorColumnPlotModel.Axes.Add(categoryAxis);
+            errorColumnPlotModel.Axes.Add(valueAxis);
+
             await base.OnInitializing();
             await ErrorColumnPlotView.Add(errorColumnPlotModel);
 

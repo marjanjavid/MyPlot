@@ -8,8 +8,9 @@
     using Zebble;
     using Domain;
     using static Zebble.Chart;
+    using OxyPlot.Axes;
 
-    partial class ShowTwoColorAreaChart
+    partial class TwoColorAreaChart
     {
         public override async Task OnInitializing()
         {
@@ -28,6 +29,8 @@
                 Limit = -1,
                 Data = areadataPoints
             });
+            twoColorAreaPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C", ExtraGridlines = new[] { 0.0 } });
+            twoColorAreaPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
             await base.OnInitializing();
             await twoColorAreaPlotView.Add(twoColorAreaPlotModel);
         }

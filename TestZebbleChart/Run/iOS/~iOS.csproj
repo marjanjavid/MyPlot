@@ -171,7 +171,7 @@
       <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.123\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Plugin.Chart.iOS">
-      <HintPath>..\..\..\..\..\Projects\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
+      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.PushNotification.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.PushNotification.4.0.176\lib\Xamarin.iOS10\Zebble.PushNotification.iOS.dll</HintPath>

@@ -135,8 +135,9 @@
     <Reference Include="Zebble.OptionsList.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.OptionsList.3.14.123\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Zebble.Plugin.Chart.Android">
-      <HintPath>..\..\..\..\..\Projects\Geeks\Git\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.Android.dll</HintPath>
+    <Reference Include="Zebble.Plugin.Chart.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ZebbleChart\Chart\Chart\lib\Zebble.Plugin.Chart.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.PushNotification.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Zebble.PushNotification.4.0.176\lib\MonoAndroid10\Zebble.PushNotification.Android.dll</HintPath>

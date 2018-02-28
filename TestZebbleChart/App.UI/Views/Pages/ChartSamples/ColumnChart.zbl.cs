@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using Zebble;
     using Domain;
+    using OxyPlot.Axes;
 
     partial class ColumnChart
     {
@@ -20,6 +21,19 @@
                     new Chart.Item(13),
                     new Chart.Item(40),
                 }));
+            columnPlotModel.Axes.Add(new CategoryAxis
+            {
+                Position = AxisPosition.Bottom,
+                Key = "CakeAxis",
+                ItemsSource = new[]
+                        {
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E"
+                     }
+            });
             await base.OnInitializing();
             await columnPlotView.Add(columnPlotModel);
         }
