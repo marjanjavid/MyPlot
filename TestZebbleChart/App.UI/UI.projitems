@@ -126,6 +126,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ContourChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ErrorColumnChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\ErrorColumnChart.zbl.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\FunctionChart.zbl" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\FunctionChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\LineChart.zbl" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\LineChart.zbl.cs" />
     <None Include="$(MSBuildThisFileDirectory)Views\Pages\ChartSamples\PieChart.zbl" />
