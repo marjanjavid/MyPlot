@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<z-Component z-type="IntervalBarChart" z-base="NavBarPage" z-namespace="UI.Pages" Title="IntervalBarChart" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../.zebble-schema.xml">
+  <z-place inside="Body">
+       <Chart Id="intervalBarPlotView"></Chart>
+  </z-place>
+</z-Component>

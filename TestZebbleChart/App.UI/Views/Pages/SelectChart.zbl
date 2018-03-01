@@ -44,6 +44,9 @@
       <Stack>
         <Button Id="btnShowHighLowChart" z-nav-forward="Pages.HighLowChart" Text="ShowHighLowChart" Style.BackgroundColor ="LightSteelBlue" Style.Border="1" Style.Margin="20"></Button>
       </Stack>
+      <Stack>
+        <Button Id="btnIntervalBarChart" z-nav-forward="Pages.IntervalBarChart" Text="ShowIntervalBarChart" Style.BackgroundColor ="LightBlue" Style.Border="1" Style.Margin="20"></Button>
+      </Stack>
     </Stack>
   </z-place>
 </z-Component>
